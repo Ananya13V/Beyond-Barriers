@@ -63,12 +63,14 @@
                     <input class="input" id="password" type="password" placeholder="" required="">
                     <span>Password</span>
                 </label>
-                <button class="submit" onclick="Login()">Login</button>
-                <p class="or-text">OR</p>
-                <button class="submit">
-                    <!-- <img src="img/google.png" class="google-icon"/> -->
-                    <span>Login using Google Account</span>
-                </button>
+                <div class="button-div">
+                    <button class="submit" onclick="Login()">Login</button>
+                    <p class="or-text">OR</p>
+                    <button class="submit" id="google-login-btn">
+                        <!-- <img src="img/google.png" class="google-icon"/> -->
+                        <span>Login using Google Account</span>
+                    </button>
+                </div>
                 <p class="signin">Don't have an acount ? <a href="register.html">Sign Up</a> </p>
             </form>
         </div>

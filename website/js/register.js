@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
 window.onload = function () {
@@ -66,6 +66,30 @@ window.onload = function () {
             });
     }
 
+    function signInWithGoogle() {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                const userData = {
+                    displayName: user.displayName,
+                    email: user.email,
+                    lastLoggedIn: Date.now(),
+                };
+
+                set(ref(database, 'users/' + user.uid), userData)
+                    .then(() => {
+                        alert('User Created with Google Sign-In');
+                    })
+                    .catch((error) => {
+                        alert(error.message);
+                    });
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+    }
+
     function validatePhoneNum(phoneNum) {
         const expression = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
         return expression.test(phoneNum);
@@ -87,5 +111,10 @@ window.onload = function () {
     window.Register = Register;
     document.querySelector('.form').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the form from submitting in the default way// Call your Register function to handle the form submission
+    });
+
+    document.getElementById('google-signup-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        signInWithGoogle();
     });
 };

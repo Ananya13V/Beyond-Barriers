@@ -1,7 +1,7 @@
 // login.js
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
 const firebaseConfig = {
@@ -56,6 +56,30 @@ function Login() {
         });
 }
 
+function signInWithGoogle() {
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const user = result.user;
+            const databaseRef = ref(database);
+            const userData = {
+                lastLogin: Date.now(),
+            };
+
+            update(ref(database, 'users/' + user.uid), userData)
+                .then(() => {
+                    alert('User Logged In with Google!');
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
+}
+
 // Explicitly attach Login function to the window object
 window.Login = Login;
 document.querySelector('.form').addEventListener('submit', function (e) {
@@ -63,3 +87,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     // Login(); // Call your Register function to handle the form submission
 });
 
+document.getElementById('google-login-btn').addEventListener('click', function (e) {
+    e.preventDefault();
+    signInWithGoogle();
+});
