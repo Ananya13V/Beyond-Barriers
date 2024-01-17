@@ -11,6 +11,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #898989;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .fb2022-copy {

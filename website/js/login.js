@@ -3,6 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import updateNavbar from "./navbar.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDVlmoEksVMg3zpu1t7Ar1M6XIYDfe60LM",
@@ -46,6 +47,8 @@ function Login() {
             update(ref(database, 'users/' + user.uid), userData)
                 .then(() => {
                     alert('User Logged In!');
+                    updateNavbar(auth);
+                    window.location.href = 'index.html';
                 })
                 .catch((error) => {
                     alert(error.message);
@@ -70,6 +73,10 @@ function signInWithGoogle() {
             update(ref(database, 'users/' + user.uid), userData)
                 .then(() => {
                     alert('User Logged In with Google!');
+                    window.location.href = 'index.html';
+                    document.getElementById('nav-login').style.display = 'none';
+                    document.getElementById('nav-profile').style.display = 'block';
+
                 })
                 .catch((error) => {
                     alert(error.message);
