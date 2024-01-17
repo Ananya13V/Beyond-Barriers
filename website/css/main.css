@@ -308,7 +308,8 @@ ul.list-in-text li:before {
 }
 
 .intro-wrapper .third::after {
-  background-image: url("../img/icon/email.svg");
+  background-image: url("../img/icon/handshake-svgrepo-com.svg");
+  size: 100px;
 }
 
 .clients {
@@ -418,12 +419,12 @@ ul.list-in-text li:before {
   margin: 50px 0px;
 }
 
-.testimonials h1 .yellow-stroke {
+.testimonials h2 .yellow-stroke {
   white-space: nowrap;
   position: relative;
 }
 
-.testimonials h1 .yellow-stroke::after {
+.testimonials h2 .yellow-stroke::after {
   content: '';
   position: absolute;
   left: 50%;
