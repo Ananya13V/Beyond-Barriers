@@ -17,4 +17,4 @@ function updateNavbar(auth) {
     });
 }
 
-export default updateNavbar;
+export { updateNavbar };

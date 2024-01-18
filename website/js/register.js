@@ -1,20 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { app, auth, database } from "./firebase.js";
 
 window.onload = function () {
-    const firebaseConfig = {
-        apiKey: "AIzaSyDVlmoEksVMg3zpu1t7Ar1M6XIYDfe60LM",
-        authDomain: "beyond-barriers-269b7.firebaseapp.com",
-        projectId: "beyond-barriers-269b7",
-        storageBucket: "beyond-barriers-269b7.appspot.com",
-        messagingSenderId: "926977430580",
-        appId: "1:926977430580:web:9da03c01283e1213d66661"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const database = getDatabase(app);
 
     function Register() {
         // Retrieve form input values when the form is submitted
@@ -56,6 +45,7 @@ window.onload = function () {
                 set(ref(database, 'users/' + user.uid), userData)
                     .then(() => {
                         alert('User Created');
+                        window.location.href = 'login.html';
                     })
                     .catch((error) => {
                         alert(error.message);
@@ -80,6 +70,7 @@ window.onload = function () {
                 set(ref(database, 'users/' + user.uid), userData)
                     .then(() => {
                         alert('User Created with Google Sign-In');
+                        window.location.href = 'login.html';
                     })
                     .catch((error) => {
                         alert(error.message);

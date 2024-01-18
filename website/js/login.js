@@ -3,20 +3,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
-import updateNavbar from "./navbar.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyDVlmoEksVMg3zpu1t7Ar1M6XIYDfe60LM",
-    authDomain: "beyond-barriers-269b7.firebaseapp.com",
-    projectId: "beyond-barriers-269b7",
-    storageBucket: "beyond-barriers-269b7.appspot.com",
-    messagingSenderId: "926977430580",
-    appId: "1:926977430580:web:9da03c01283e1213d66661"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase(app);
+import { updateNavbar } from "./navbar.js";
+import { app, auth, database } from "./firebase.js";
 
 function validateEmail(email) {
     const expression = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -73,10 +61,8 @@ function signInWithGoogle() {
             update(ref(database, 'users/' + user.uid), userData)
                 .then(() => {
                     alert('User Logged In with Google!');
+                    updateNavbar(auth);
                     window.location.href = 'index.html';
-                    document.getElementById('nav-login').style.display = 'none';
-                    document.getElementById('nav-profile').style.display = 'block';
-
                 })
                 .catch((error) => {
                     alert(error.message);
