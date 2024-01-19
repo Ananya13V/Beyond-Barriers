@@ -13,16 +13,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/0e035b9984.js" crossorigin="anonymous"></script>
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://kit.fontawesome.com/0e035b9984.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.typekit.net/rrg4put.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
   <link rel="stylesheet" href="css/community.css">
 </head>
 
@@ -45,7 +41,7 @@
                 <a class="nav-link" href="aboutus.html">About</a>
               </li>
               <li class="nav-card-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="connect.html">Connect</a>
               </li>
               <li class="nav-card-item">
                 <a class="nav-link active" href="community.html">Community</a>
@@ -63,457 +59,384 @@
     </div>
     <div>
       <div id="interaction-section" style="display: none;">
-        <div class="content-container">
-          <div class="container">
-            <!-- ADS -->
-            <section id="ads">
-                <div>
-                    <a>
-                        <span id="ad-title">Your project needs CI/CD. -</span>
-                        <span id="ad-subtitle"
-                            >Add the most popular GitHub integration and start
-                            building for free.
-                        </span>
-                    </a>
-                    <span id="ad">Ad </span>
+        <div class="loggedin-content-container">
+          <div class="main-flex-container">
+            <div class="left-flex-container flex-item">
+              <div class="search-box">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search" style="cursor: pointer;"></i>
+              </div>
+              <div class="nav-links">
+                <div class="filter-by">
+                  <h4><i class="fa-solid fa-sliders"></i>Filter Posts</h4>
                 </div>
-            </section>
-            <!-- LEFT ASIDE -->
-            <div id="left-aside-wrapper">
-                <aside id="left-aside">
-                    <div id="profile-card">
-                        <div id="background"></div>
-                        <div id="profile-info">
-                            <img
-                                src="/images/picture.jpeg"
-                                alt="Profile picture"
-                            />
-                            <strong id="profile-name"
-                                >Maurício Mendes Rossi</strong
-                            >
-                            <small>Front-End Developer</small>
-                        </div>
-                        <div id="profile-links">
-                            <a href="#">
-                                <span>
-                                    Who's viewed your profile
-                                </span>
-                                <span class="profile-number">
-                                    102
-                                </span>
-                            </a>
-                            <a href="#">
-                                <span>
-                                    Connections
-                                </span>
-                                <span class="profile-number">
-                                    452
-                                </span>
-                            </a>
-                        </div>
-                        <span>Grow your network</span>
-                        <a href="#">
-                            <span>Access exclusive tools & insights</span>
-                            <span id="profile-premium">
-                                <span id="profile-square">■</span> Try Premium
-                                Free for 1 Month</span
-                            >
-                        </a>
-                    </div>
-                    <div id="profile-groups">
-                        <section>
-                            <header
-                                onmouseover="showProfileGroupIcon(this)"
-                                onmouseout="showProfileGroupIcon(this)"
-                            >
-                                <span>Recent</span>
-                                <span
-                                    class="fas fa-angle-up"
-                                    onclick="toggleProfileGroupList(this)"
-                                ></span>
-                            </header>
-                            <ul class="group-list">
-                                <li>
-                                    <span class="fas fa-users"></span>
-                                    <span>React Developers</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-hashtag"></span>
-                                    <span>javascript</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-hashtag"></span>
-                                    <span>webdevelopment</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-users"></span>
-                                    <span>Javascript Brasil</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-users"></span>
-                                    <span>Dog Lovers</span>
-                                </li>
-                            </ul>
-                        </section>
-                        <section>
-                            <header
-                                onmouseover="showProfileGroupIcon(this)"
-                                onmouseout="showProfileGroupIcon(this)"
-                            >
-                                <span class="group-title">Groups</span>
-                                <span
-                                    class="fas fa-angle-up"
-                                    onclick="toggleProfileGroupList(this)"
-                                ></span>
-                            </header>
-                            <ul>
-                                <li>
-                                    <span class="fas fa-users"></span>
-                                    <span id="aaaa">React Developers</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-users"></span>
-                                    <span>Javascript Brasil</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-users"></span>
-                                    <span>Dog Lovers</span>
-                                </li>
-                            </ul>
-                            <div class="group-list">
-                                <a href="#">See all</a>
-                            </div>
-                        </section>
-                        <section>
-                            <header
-                                onmouseover="showProfileGroupIcon(this)"
-                                onmouseout="showProfileGroupIcon(this)"
-                            >
-                                <span class="group-title">
-                                    Followed Hashtags</span
-                                >
-                                <span
-                                    class="fas fa-angle-up"
-                                    onclick="toggleProfileGroupList(this)"
-                                ></span>
-                            </header>
-                            <ul>
-                                <li>
-                                    <span class="fas fa-hashtag"></span>
-                                    <span>javascript</span>
-                                </li>
-                                <li>
-                                    <span class="fas fa-hashtag"></span>
-                                    <span>webdevelopment</span>
-                                </li>
-                            </ul>
-                            <a href="#">See all</a>
-                        </section>
-                        <a href="#">Discover more</a>
-                    </div>
-                </aside>
+                <ul>
+                  <li class="nav-items current-page"><a href="#">All Posts</a></li>
+                  <li class="nav-items"><a href="#">Visual Impairment</a></li>
+                  <li class="nav-items"><a href="#">Hearing Impairment</a></li>
+                  <li class="nav-items"><a href="#">Autism Spectrum Disorder</a></li>
+                  <li class="nav-items"><a href="#">Down Syndrome</a></li>
+                  <li class="nav-items"><a href="#">Dyslexia</a></li>
+                  <li class="nav-items"><a href="#">ADHD</a></li>
+                  <li class="nav-items"><a href="#">Cerebral Palsy</a></li>
+                  <li class="nav-items"><a href="#">Muscular Dystrophy</a></li>
+                  <li class="nav-items"><a href="#">Intellectual Disability</a></li>
+                </ul>
+              </div>
             </div>
-            <!-- MAIN -->
-            <div id="main-wrapper">
-                <main id="main-section">
-                    <div id="share-box">
-                        <div id="button-box">
-                            <button id="btn-post">
-                                <span class="fas fa-edit"></span>
-                                <span id="btn-text">Start a post</span>
-                            </button>
-                            <button id="btn-picture">
-                                <span class="fas fa-camera"></span>
-                            </button>
-                            <button id="btn-video">
-                                <span class="fas fa-video"></span>
-                            </button>
-                            <button id="btn-document">
-                                <span class="fas fa-file"></span>
-                            </button>
-                        </div>
-                        <div id="link-box">
-                            <a href="#">Write an article</a>
-                            <span>on LinkedIn</span>
-                        </div>
+            <div class="center-flex-container flex-item">
+              <div class="home">
+                <h1>Posts</h1>
+                <i class="fas fa-magic"></i>
+              </div>
+
+              <div class="post-tweet">
+                <form action="">
+                  <div class="form-group-1">
+                    <img src="img/user-icon.jpg" alt="profile-pics">
+                    <input type="text" placeholder="What's happening?">
+                  </div>
+                  <div class="form-group-2">
+                    <div class="post-icons">
+                      <i class="far fa-image"></i>
+                      <!-- <i class="far fa-file-image"></i>
+                      <i class="fas fa-stream"></i> -->
+                      <i class="far fa-smile"></i>
+                      <i class="far fa-calendar-check"></i>
                     </div>
-                    <div id="feed-sort">
-                        <hr />
-                        <button>
-                            <span>Sort by:</span>
-                            <strong>Top</strong>
-                            <span class="fas fa-sort-down"></span>
-                        </button>
+                    <button class="btn" type="submit">Post</button>
+                  </div>
+                </form>
+
+              </div>
+              <!-- User Content -->
+              <div class="tweets">
+                <div class="user-pics"><img src="img/user-1.jpg" alt="user3"></div>
+                <div class="user-content-box">
+                  <div class="user-names">
+                    <hi class="full-name">Sophia Anderson</hi>
+                    <p class="user-name">@iamsophiaa</p>
+                    <p class="time"> 58mins</p>
+                  </div>
+
+                  <div class="user-content">
+                    <p>Greetings to the amazing community! I'm thriving in the corporate world despite being on the autism spectrum. Each challenge is a chance to learn and grow. Let's discuss strategies for success and create a supportive network!</p>
+                  </div>
+
+                  <div class="content-icons">
+                    <i class="far fa-comment blue"> 109</i>
+                    <i class="fas fa-retweet green"> 865</i>
+                    <i class="far fa-heart red">1.6k</i>
+                    <i class="fas fa-chevron-up blue"></i>
+                  </div>
+
+                </div>
+              </div>
+              <div class="tweets">
+                <div class="user-pics"><img src="img/user-2.jpg" alt="user2"></div>
+                <div class="user-content-box">
+                  <div class="user-names">
+                    <hi class="full-name">Ava Martinez</hi>
+                    <p class="user-name">@avamartinez</p>
+                    <p class="time"> 1hr</p>
+                  </div>
+
+                  <div class="user-content">
+                    <p>Hey friends! As a person with hearing impairment, I've found success in the tech industry. The key is effective communication and leveraging assistive technologies. Remember, diversity fuels innovation. Share your experiences and let's inspire each other!
+                      <!-- <a href="#">#100daysofcode</a> <a href="#">#javascript</a> <a href="#">#womenwhocode</a> -->
+                    </p>
+                  </div>
+
+                  <div class="content-icons">
+                    <i class="far fa-comment blue"> 2k</i>
+                    <i class="fas fa-retweet green"> 6k</i>
+                    <i class="far fa-heart red"> 10k</i>
+                    <i class="fas fa-chevron-up blue"></i>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- <div class="tweets">
+                <div class="user-pics"><img src="./img/user1.jpg" alt="user1"></div>
+                <div class="user-content-box">
+                  <div class="user-names">
+                    <hi class="full-name">Eric Alvarez</hi>
+                    <p class="user-name">@eric_alvarez</p>
+                    <p class="time"> 2hrs</p>
+                  </div>
+
+                  <div class="user-content">
+                    <p>Eat. Code, Sleep. repeat! <a href="#">#CodeNewbie</a> <a href="#">#100DaysOfCode</a></p>
+                    <img src="./img/content1.jpg" alt="content1">
+                  </div>
+
+                  <div class="content-icons">
+                    <i class="far fa-comment blue"> 273</i>
+                    <i class="fas fa-retweet green"> 2k</i>
+                    <i class="far fa-heart red"> 3k</i>
+                    <i class="fas fa-chevron-up blue"></i>
+                  </div>
+
+                </div>
+              </div> -->
+
+              <div class="tweets">
+                <div class="user-pics"><img src="img/user-icon.jpg" alt="user4"></div>
+                <div class="user-content-box">
+                  <div class="user-names">
+                    <hi class="full-name">Harry Wilson</hi>
+                    <p class="user-name">@harrywilson</p>
+                    <p class="time"> 4hrs</p>
+                  </div>
+
+                  <div class="user-content">
+                    <p>Hi everyone! I wanted to share a small victory in my journey with cerebral palsy. Today, I completed a project that seemed daunting initially. Remember, progress is progress, no matter how small. Let's celebrate each other's achievements!
+                    </p>
+                  </div>
+
+                  <div class="content-icons">
+                    <i class="far fa-comment blue"> 4k</i>
+                    <i class="fas fa-retweet green"> 8k</i>
+                    <i class="far fa-heart red">13k</i>
+                    <i class="fas fa-chevron-up blue"></i>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="tweets">
+                <div class="user-pics"><img src="img/user-4.jpg" alt="user5"></div>
+                <div class="user-content-box">
+                  <div class="user-names">
+                    <hi class="full-name">Nora Chao</hi>
+                    <p class="user-name">@chaonora</p>
+                    <p class="time"> 6hrs</p>
+                  </div>
+
+                  <div class="user-content">
+                    <p>Triumph Over Adversity</p>
+
+                    <p> Hello fellow warriors! Living with a physical disability hasn't stopped me from pursuing my passion for art. Let's talk about how creativity knows no bounds. Share your artistic endeavors and let's empower each other. Attached below is my latest work :)</p>
+                    <img src="img/painting.jpg" alt="painting">
+                  </div>
+
+                  <div class="content-icons">
+                    <i class="far fa-comment blue"> 78</i>
+                    <i class="fas fa-retweet green"> 265</i>
+                    <i class="far fa-heart red"> 934</i>
+                    <i class="fas fa-chevron-up blue"></i>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- <section class="follow-users-box">
+
+                <div class="follow-header">
+                  <h1 class="main-text">Connect With</h1>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <div class="follow-user"> -->
+                  <!-- <div class="related-followers">
+                    <p class="sub-text"><i class="fas fa-user"></i> Ellie Jamie and 20 others follow</p>
+                  </div> -->
+
+                  <!-- <div class="user-profile">
+                    <div class="user-pics"><img src="./img/user6.jpg" alt="user6">
                     </div>
-                    <article>
-                        <div id="post-author">
-                            <a href="#">
-                                <div>
-                                    <img
-                                        src="/images/example-person2.jpeg"
-                                        alt=""
-                                    />
-                                    <div>
-                                        <div>
-                                            <strong id="post-author-name"
-                                                >Matthew James</strong
-                                            >
-                                            <span>
-                                                <span>&nbsp;·&nbsp;</span>
-                                                1st</span
-                                            >
-                                        </div>
-                                        <span
-                                            >Web Developer at Muse
-                                            Software</span
-                                        >
-                                        <span>12h</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div>
-                                <span class="fas fa-circle"></span>
-                                <span class="fas fa-circle"></span>
-                                <span class="fas fa-circle"></span>
-                            </div>
+
+                    <div class="user-profile-content">
+                      <div class="title-container">
+                        <div class="user-names">
+                          <div class="full-name">
+                            <h1 class="main-text">Linda Shelton #BlackLivesMatter</h1>
+                          </div>
+                          <div class="user-name">
+                            <p class="sub-text">@Linda_shelton</p>
+                          </div>
                         </div>
-                        <div id="post-data">
-                            <p>
-                                Yesterday I had a conversation with
-                                <span>Maurício Rossi</span>, Front-End
-                                Developer, and found out that he cloned LinkedIn
-                                layout using HTML/CSS. I think you should check
-                                this out ;)
-                            </p>
-                            <p id="post-translation">
-                                <button>See translation</button>
-                            </p>
-                            <img src="/images/example-post-image.png" alt="" />
+
+                        <div class="follow-btn"><a href="#">Connect</a></div>
+
+                      </div>
+                      <div class="bio-container">
+                        <p><a href="#">♯WordPress/Php</a> Geek Smiling face with sunglasses <a
+                            href="#">♯JavascriptDeveloper</a> Slightly smiling face <a href="#">♯ToolsCreator</a> <a
+                            href="#">♯http://webscreenshot.now.sh</a> Always ready to help with code Handshake</p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="follow-user"> -->
+                  <!-- <div class="related-followers">
+                    <p class="sub-text"><i class="fas fa-user"></i> JavaScript Ninja and 200 others follow</p>
+                  </div> -->
+
+                  <!-- <div class="user-profile">
+                    <div class="user-pics"><img src="./img/user7.jpg" alt="user7">
+                    </div>
+
+                    <div class="user-profile-content">
+                      <div class="title-container">
+                        <div class="user-names">
+                          <div class="full-name">
+                            <h1 class="main-text">Gavin Johnson #JavaScript</h1>
+                          </div>
+                          <div class="user-name">
+                            <p class="sub-text">@Gavinjohnson</p>
+                          </div>
                         </div>
-                        <div id="post-interactions">
-                            <div id="interactions-amount">
-                                <span
-                                    id="like-icon"
-                                    class="fas fa-thumbs-up fa-flip-horizontal"
-                                ></span>
-                                <span
-                                    id="heart-icon"
-                                    class="fas fa-heart"
-                                ></span>
-                                <span id="amount-info"
-                                    >23 <span>&nbsp;·&nbsp;</span> 4
-                                    Comments</span
-                                >
-                            </div>
-                            <div id="interactions-btns">
-                                <button>
-                                    <span
-                                        class="far fa-thumbs-up fa-flip-horizontal"
-                                    ></span>
-                                    <span>Like</span>
-                                </button>
-                                <button>
-                                    <span
-                                        class="far fa-comment-dots fa-flip-horizontal"
-                                    ></span>
-                                    <span>Comment</span>
-                                </button>
-                                <button>
-                                    <span class="far fa-share-square"></span>
-                                    <span>Share</span>
-                                </button>
-                            </div>
+
+                        <div class="follow-btn"><a href="#">Connect</a></div>
+
+                      </div>
+                      <div class="bio-container">
+                        <a href="#">♯JavascriptDeveloper</a> Avocado | Fire Speaker | Fire Teacher | Youtube - <a
+                          href="#">http://bit.ly/jqqyt</a> |<a href="#"> @twilio</a> Champion | Motto: <a
+                          href="#">#LearnBuildTeach</a></p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div> -->
+
+                <!-- <div class="follow-user">
+                  <div class="related-followers">
+                    <p class="sub-text"><i class="fas fa-user"></i> The Code Boy and 50 others follow</p>
+                  </div>
+
+                  <div class="user-profile">
+                    <div class="user-pics"><img src="./img/user8.jpg" alt="user8">
+                    </div>
+
+                    <div class="user-profile-content">
+                      <div class="title-container">
+                        <div class="user-names">
+                          <div class="full-name">
+                            <h1 class="main-text">William D Gallucci</h1>
+                          </div>
+                          <div class="user-name">
+                            <p class="sub-text">@Iamwilliamd_shelton</p>
+                          </div>
                         </div>
-                    </article>
-                    <article>
-                        <div id="post-author">
-                            <a href="#">
-                                <div>
-                                    <img
-                                        src="/images/example-person3.jpeg"
-                                        alt=""
-                                    />
-                                    <div>
-                                        <div>
-                                            <strong id="post-author-name"
-                                                >Alec Fisher</strong
-                                            >
-                                            <span>
-                                                <span>&nbsp;·&nbsp;</span>
-                                                1st</span
-                                            >
-                                        </div>
-                                        <span>Web Designer at SL Systems</span>
-                                        <span>15h</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div>
-                                <span class="fas fa-circle"></span>
-                                <span class="fas fa-circle"></span>
-                                <span class="fas fa-circle"></span>
-                            </div>
-                        </div>
-                        <div id="post-data">
-                            <p>
-                                You all could check
-                                <span>Maurício Rossi</span>'s Github, he has
-                                many academic projects using technologies such
-                                as Javascript, React, Redux, Sagas, HTML, CSS
-                                and others. Try clicking
-                                <a href="https://github.com/mrmauricio">here</a>
-                                ;)
-                            </p>
-                            <p id="post-translation">
-                                <button>See translation</button>
-                            </p>
-                            <img src="/images/example-post-image2.png" alt="" />
-                        </div>
-                        <div id="post-interactions">
-                            <div id="interactions-amount">
-                                <span
-                                    id="like-icon"
-                                    class="fas fa-thumbs-up fa-flip-horizontal"
-                                ></span>
-                                <span id="amount-info"
-                                    >18 <span>&nbsp;·&nbsp;</span> 6
-                                    Comments</span
-                                >
-                            </div>
-                            <div id="interactions-btns">
-                                <button>
-                                    <span
-                                        class="far fa-thumbs-up fa-flip-horizontal"
-                                    ></span>
-                                    <span>Like</span>
-                                </button>
-                                <button>
-                                    <span
-                                        class="far fa-comment-dots fa-flip-horizontal"
-                                    ></span>
-                                    <span>Comment</span>
-                                </button>
-                                <button>
-                                    <span class="far fa-share-square"></span>
-                                    <span>Share</span>
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                </main>
+
+                        <div class="follow-btn"><a href="#">follow</a></div>
+
+                      </div>
+                      <div class="bio-container">
+                        <p>software engineer at
+                          <a href="#">@soonastudios</a>
+                          . career switcher. vue + rails. tweeting about tech, books, startups, and big ideas. writing @
+                          <a href="#">http://jamestucker.dev.</a>
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div> -->
+
+                <!-- <div class="follow-footer">
+                  <a href="#">Show more</a>
+                </div>
+
+              </section> -->
+
+              <!-- <div class="tweets">
+                <div class="user-pics"><img src="./img/user5.jpg" alt="user5"></div>
+                <div class="user-content-box">
+                  <div class="user-names">
+                    <hi class="full-name">Nora Chao</hi>
+                    <p class="user-name">@chaonora</p>
+                    <p class="time"> 6hrs</p>
+                  </div>
+
+                  <div class="user-content">
+                    <p>Time to settle down and play my favourite game IN THE WORLD Earth globe europe-africa</p>
+
+                    <p> Haven’t played for about a month, too busy coding.
+                      So tired this evening though.
+                      Poker tournament with husband later..</p>
+                    <img src="./img/content5.jpg" alt="content5">
+                  </div>
+
+                  <div class="content-icons">
+                    <i class="far fa-comment blue"> 78</i>
+                    <i class="fas fa-retweet green"> 265</i>
+                    <i class="far fa-heart red"> 934</i>
+                    <i class="fas fa-chevron-up blue"></i>
+                  </div>
+
+                </div>
+              </div> -->
+
+              <div class="pagnation">
+                <a href="#">Load more</a>
+              </div> 
+
             </div>
-            <!-- RIGHT ASIDE -->
-            <aside id="right-aside">
-                <div id="rec-section">
-                    <div>
-                        <header>
-                            <span>Add to your feed</span>
-                            <span
-                                class="fas fa-info-circle"
-                                onmouseover="showRecommendationsInfo(this)"
-                                onmouseout="showRecommendationsInfo(this)"
-                            >
-                                <div id="float-info">
-                                    <span>
-                                        Follow things that interest you to
-                                        personalize your feed.
-                                    </span>
-                                    <a href="#">Learn more.</a>
-                                </div>
-                                <span>►</span>
-                                <div id="square"></div>
-                            </span>
-                        </header>
-                        <div>
-                            <div>
-                                <img src="/images/mongo.jpeg" alt="" />
-                                <div>
-                                    <strong>MongoDB</strong>
-                                    <small>Company - Computer Software</small>
-                                </div>
-                                <button>
-                                    <span class="fas fa-plus"></span>
-                                    <span>Follow</span>
-                                </button>
-                            </div>
-                            <div>
-                                <img src="/images/react.png" alt="" />
-                                <div>
-                                    <strong>#reactjs</strong>
-                                </div>
-                                <button>
-                                    <span class="fas fa-plus"></span>
-                                    <span>Follow</span>
-                                </button>
-                            </div>
-                            <div>
-                                <img src="/images/example-person.jpeg" alt="" />
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <small
-                                        >Entrepreneur and Marketing
-                                        Specialist</small
-                                    >
-                                </div>
-                                <button>
-                                    <span class="fas fa-plus"></span>
-                                    <span>Follow</span>
-                                </button>
-                            </div>
-                        </div>
-                        <a href="#">View all recommendations</a>
+            <div class="right-flex-container flex-item">
+              <div class="trends">
+                <ul class="chats-ul">
+                  <li class="nav-list header">
+                    <h2>Your Chats</h2>
+                    <i class="fa-solid fa-comments">
+                    </i>
+                  <li class="nav-list">
+                    <div class="trend-list">
+                      <p class="main-text unread-chat-text">Noah Brown</p>
+                      <p class="sub-text unread-chat-text">ALL THE BEST!</p>
                     </div>
-                </div>
-                <div id="linkedin-section">
-                    <section>
-                        <small>Ad</small>
-                        <a href="#">
-                            <span
-                                >Maurício, unlock your full potential with
-                                Linkedin Premium</span
-                            >
-                            <div>
-                                <img src="/images/picture.jpeg" alt="" />
-                                <img
-                                    id="linkedin-key"
-                                    src="/images/linkedin-ad.png"
-                                    alt=""
-                                />
-                            </div>
-                            <strong>
-                                See who's viewed your profile in the last 90
-                                days
-                            </strong>
-                            <div>
-                                <button>Try for free</button>
-                            </div>
-                        </a>
-                    </section>
-                    <footer>
-                        <ul>
-                            <li>About</li>
-                            <li>Help Center</li>
-                            <li>
-                                Privacy & Terms<span
-                                    class="fas fa-angle-down"
-                                ></span>
-                            </li>
-                            <li>Advertising</li>
-                            <li>
-                                Business Services
-                                <span class="fas fa-angle-down"></span>
-                            </li>
-                            <li>Get the LinkedIn app</li>
-                            <li>More</li>
-                        </ul>
-                        <div>
-                            <strong>Linked<span>in</span></strong>
-                            <span>LinkedIn Corporation © 2019</span>
-                        </div>
-                    </footer>
-                </div>
-            </aside>
-        </div>
+                    <div class="trend-icon">
+                      <i class="fa-solid fa-circle"></i>
+                    </div>
+                  </li>
+                  <li class="nav-list">
+                    <div class="trend-list">
+                      <p class="main-text unread-chat-text">Liam Johnson</p>
+                      <p class="sub-text unread-chat-text">You've got this! Just apply, ...</p>
+                    </div>
+                    <div class="trend-icon">
+                      <i class="fa-solid fa-circle"></i>
+                    </div>
+                  </li>
+                  <li class="nav-list">
+                    <div class="trend-list">
+                      <p class="main-text">Sophia Anderson</p>
+                      <p class="sub-text">Hey Sophia! Your motivational posts ...</p>
+                    </div>
+                    <div class="trend-icon">
+                    </div>
+                  </li>
+                  <li class="nav-list">
+                    <div class="trend-list">
+                      <p class="main-text">Amelia Harris</p>
+                      <p class="sub-text">That's great! When are you free to talk?</p>
+                    </div>
+                    <div class="trend-icon">
+                    </div>
+                  </li>
+                  <li class="nav-list">
+                    <div class="trend-list">
+                      <p class="main-text">Ethan Sullivan</p>
+                      <p class="sub-text">Your recent post was really inspiring!</p>
+                    </div>
+                    <div class="trend-icon">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="login-prompt" class="content-container" style="display: none;">
@@ -529,7 +452,7 @@
     </div>
   </div>
 
-  <div class="fb2022-copy">Fbee 2022 copyright</div>
+  <!-- <div class="fb2022-copy">Fbee 2022 copyright</div> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>

@@ -1,0 +1,86 @@
+.profile-main-div {
+    margin: 140px 30px 40px 30px;
+    border-radius: 30px;
+    height: 1100px;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.profile-logout-btn {
+    position: absolute;
+    top: 185px;
+    right: 80px;
+    background-color: #089ecf;
+    color: white;
+    border: none;
+    width: 90px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 500ms;
+}
+
+.profile-logout-btn:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-container div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile-container div .age-input {
+    border: 2px solid #089ecf !important;
+    height: 60px;
+    width: 220px;
+    border-radius: 12px;
+}
+
+.profile-container div textarea {
+    border: 2px solid #089ecf !important;
+    border-radius: 18px;
+    width: 450px;
+}
+
+.profile-container div #disability-certificate, #resume {
+    border: 2px solid #089ecf !important;
+    border-radius: 12px;
+    width: 240px;
+}
+
+.profile-container .submit-btn-div {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container .submit-btn-div button {
+    border: none;
+    background-color: #ffd200;
+    width: 260px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: 500ms;
+}
+
+.profile-container .submit-btn-div button:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}

@@ -59,10 +59,11 @@ h2 {
 }
 
 .navbar {
-  z-index: 20;
+  z-index: 1020;
   margin: 0 auto;
   padding: 20px 0;
   height: 98px;
+  background: #089ecf;
 }
 
 .navbar .navbar-brand {
@@ -79,12 +80,15 @@ h2 {
   position: relative;
   display: inline-block;
   color: white;
-  padding: 15px 30px !important;
+  padding: 15px 20px !important;
   margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .navbar li .nav-link:hover {
-  font-weight: 900;
+  transform: scale(1.2);
+  transition: 50ms;
 }
 
 .navbar li .active::after {
@@ -1190,3 +1194,41 @@ footer .footer-wrap .newsletter #subscribe button {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
+.chatbot-btn-div {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.chatbot-btn-div p {
+  color: #424242;
+  font-weight: bold;
+  font-family: "Fredoka One";
+  font-size: 24px;
+}
+
+.chatbot-btn {
+  background-color: #ffd200;
+  border: none;
+  width: 220px;
+  height: 70px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.05);
+  transition: 100ms;
+  font-weight: 800;
+}
+
+/* .chatbot-btn a:hover {
+  font-weight: bold;
+} */

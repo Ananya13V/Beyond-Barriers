@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/Roboto-Regular.ttf);
+}
+
+.connect-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 40px 50px 40px;
+    text-align: center;
+}
+
+.connect-heading h5 {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 200;
+    z-index: 10;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    row-gap: 90px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.front-name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+}
+
+.front-name-section h3, h5 {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.front-name-section hr {
+    height: 3px;
+    width: 300px;
+    color: white;
+}
+
+.front-description {
+    display: flex;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 30px 20px 30px;
+}
+
+.front-description p {
+    font-size: 20px;
+    font-weight: 600;
+    font: 'Roboto';
+}
+
+.back-description {
+    display: flex;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 30px 5px 30px;
+}
+
+.back-description p {
+    font-size: 20px;
+    font-weight: 600;
+    font: 'Roboto';
+}
+
+.back-btn-div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.back-btn {
+    color: black;
+    border: none;
+    width: 160px;
+    font-size: 20px;
+    height: 50px;
+    background-color: #ffd200;
+    border-radius: 20px;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
+.back-btn a {
+    text-decoration: none;
+}
+
+.back-btn a:hover {
+    font-weight: 100;
+}
+
+.card {
+    width: calc(45% - 20px);
+    height: 300px;
+    perspective: 1000px;
+    border: none;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+    border-radius: 30px;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #4da7c5;
+    color: #fff;
+    display: flex;
+    border: 10px solid #4da7c5;
+    border-radius: 30px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+  }
+  
+  .card-back {
+    background-color: #4da7c5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #4da7c5;
+    border-radius: 30px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+  }
+  
