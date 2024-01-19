@@ -419,6 +419,8 @@ ul.list-in-text li:before {
 .testimonials {
   text-align: center;
   margin: 50px 0px;
+  
+  
 }
 
 .testimonials h2 .yellow-stroke {
@@ -444,6 +446,7 @@ ul.list-in-text li:before {
 .testimonials .testimonial {
   text-align: left;
   margin-top: 40px;
+  font-size: 20px;
 }
 
 .testimonials .testimonial .photo {
@@ -476,6 +479,7 @@ ul.list-in-text li:before {
 
 .testimonials .carousel-inner {
   position: relative;
+  padding: 10px;
 }
 
 .testimonials .carousel-inner .controllers {
@@ -575,6 +579,11 @@ ul.list-in-text li:before {
 .latest-articles h1 .yellow-stroke {
   position: relative;
 }
+
+/* .aboutus h2 .yellow-stroke::after{
+  position: relative;
+  white-space: nowrap;
+} */
 
 .latest-articles h1 .yellow-stroke::after {
   content: '';
@@ -937,10 +946,11 @@ footer .footer-wrap .newsletter #subscribe button {
     font-size: 2em;
   }
   .intro-wrapper .container {
-    background-image: url("../img/intro-img.png");
+    background-image: url("../img/Lp.svg");
+    /* padding: 20px; */
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left 0px bottom 0px;
+    background-position: left -20px bottom 200px;
   }
   .projects-wrapper {
     padding: 70px 30px !important;
