@@ -952,9 +952,9 @@ footer .footer-wrap .newsletter #subscribe button {
   .intro-wrapper .container {
     background-image: url("../img/Lp.svg");
     /* padding: 20px; */
-    background-size: cover;
+    background-size: 65%;
     background-repeat: no-repeat;
-    background-position: left -20px bottom 200px;
+    background-position: left -20px bottom 300px;
   }
   .projects-wrapper {
     padding: 70px 30px !important;
@@ -1019,6 +1019,7 @@ footer .footer-wrap .newsletter #subscribe button {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    margin-bottom: 70px;
   }
   .variations .text {
     width: 50%;
