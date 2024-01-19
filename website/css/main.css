@@ -952,7 +952,7 @@ footer .footer-wrap .newsletter #subscribe button {
   .intro-wrapper .container {
     background-image: url("../img/Lp.svg");
     /* padding: 20px; */
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: left -20px bottom 200px;
   }
