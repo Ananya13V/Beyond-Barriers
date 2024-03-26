@@ -24,6 +24,13 @@ https://github.com/Ananya13V/Beyond-Barriers/assets/113530075/776e196f-679f-459b
 
 https://github.com/Ananya13V/Beyond-Barriers/assets/113530075/315ee2f8-1f9f-4083-9957-6d6712595900
 
+# Community
+This page opens a community to the user, where they can chat, post, and read other's thoughts.  
+It is a helpful feature to allow the user to get in touch with fellow PwD candidates.
+
+![Screenshot 2024-03-26 202500](https://github.com/Ananya13V/Beyond-Barriers/assets/113530075/7ce3c37e-a459-4b69-8ce7-4dbca043b3be)
+
+
 # Jobs
 The main feature of the website, which shows the available jobs. 
 
